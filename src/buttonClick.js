@@ -1,27 +1,15 @@
 import { useState } from "react"
-let value="shoaip"
+let Name="Ahmed"
 export default function ButtonClick(){
-  let [name,setNmae]=useState(value)
- 
-  function buttonOnClick(){
-    if( name == "Ahmed")
-    {
-      setNmae("Update")
+let [name,setName]=useState("Ahmed")
 
-    }
-    else{
-
-      setNmae("Ahmed")
-    }
-      
-  }
-
-  
-  
-return (
-  <>
-    <button onClick={buttonOnClick}>click</button>
-    <h1>{name}</h1>
-    </>
-)
+function changeName(){
+setName("Mohamed")
+}
+  return(
+<di>
+  <h1>{name}</h1>
+  <button onClick={changeName}>ButtonClick</button>
+</di>
+  )
 }

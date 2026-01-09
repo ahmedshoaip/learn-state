@@ -1,16 +1,14 @@
-import { useState } from "react"
-export default function MyInput(){
-    const [value, setValue]=useState("")
-
-
-    return (
+import { useState } from "react";
+export default function Myinput(){
+    const [value,setinput]=useState("");
+    return(
         <>
-        <label>Enter your Name</label>
-        <input onChange={handelChangeInput} value={value} />
+        <label>Name:</label>
+        <input value={value} onChange={changeinput} type="text" placeholder="Enter your name"/>
         </>
     )
-function handelChangeInput(event){
-    setValue(event.target.value)
-    
-}
-}
+    function changeinput(e){
+setinput(e.target.value);        
+    }
+        
+    }
